@@ -1,3 +1,5 @@
+import datetime
+from datetime import date
 
 class Disciplina:
     """Classe representa o conceito de uma disciplina na UFRJ"""
@@ -25,9 +27,28 @@ class Disciplina:
             print("Vagas esgotadas")
 #1)a)
     def consultarVagas(self):
+        """Retorna a quantidade total de vagas e as vagas disponíveis"""
          return("Vagas totais:{}. Vagas livres:{}".format(self.vagas).format(self.vagas-len(self.alunos)))
 
 #b)
     def __str__(self):
-        """Retorna uma descrição de um objeto da classe"""
-        return "{}\t{}\tmatricula {}".format(self.nome, (self.alunos), self.vagas)
+        """Retorna uma descrição de um objeto da classe ao chamar print("código da disciplina")"""
+        return "{}, alunos inscritos: \t {} \t Vagas totais:{}. Vagas livres: {}".format(self.nome, self.alunos, self.vagas, self.vagas-len(self.alunos)
+#Questão 2
+#a)
+class Pessoa:
+    def __init__(self, nome, dataNascimento,nomeDeMae, nomeDePai):
+      "mudar"  """Cria um objeto da classe Aluno com atributos nome, DRE, matricula"""
+        self.nome = nome
+        self.dataNascimento = dataNascimento       
+        self.nomeDeMae = nomeDeMae
+        self.nomeDePai = nomeDePai
+    #concertar #b)
+    def idade(self, data):
+        self.data = date.today().strftime("%d/ %m /%Y"),
+        return self.data - self.dataNascimento
+#c)
+    def __str__(self):
+        """Retorna uma descrição de um objeto da classe ao chamar print("código da disciplina")"""
+        return "Nome: {}, idade: {}, mae: {}, pai: {}".format(self.nome, self.data, self.nomeDeMae,  self.nomeDePai)    
+
