@@ -10,7 +10,7 @@ class VeiculoAutomotor():
         return "Dono: {}, placa: {}, combustível: {}".format(self.dono, self.placa,self.combustivel)
 #1)a)
 class Automovel(VeiculoAutomotor):
-    def __init__(self, dono:str , placa:str , combustivel:str, lugares:int, portas:int, ano:int):     
+    def __init__(self:object, dono:str , placa:str , combustivel:str, lugares:int, portas:int, ano:int):     
       """Construindo um construtor com os objetos que um Automovel possui."""
       super().__init__( dono, placa, combustivel)
       self.lugares = lugares 
@@ -27,7 +27,7 @@ class Automovel(VeiculoAutomotor):
 
 #2)a)
 class Caminhao(VeiculoAutomotor):
-    def __init__(self, dono:str , placa:str , combustivel:str, cargaMax:int):
+    def __init__(self:object, dono:str , placa:str , combustivel:str, cargaMax:int):
      """Construindo um construtor com os objetos que um Caminhão possui"""
      super().__init__( dono, placa, combustivel)
      self.cargaMax = cargaMax  
