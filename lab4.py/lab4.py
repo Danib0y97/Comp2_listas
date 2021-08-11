@@ -1,7 +1,7 @@
 #Daniel Ferreira 
 #1)
 def contatos(lista:list) -> dict:
-    """Recebe uma lista de dicionários, retornando um dicionário."""    
+    """Recebe uma lista de  dicionários na entrada, junta os dados com suas chaves retornando todos os dados em um único dicionário."""    
     nomes = []
     if type(lista[0]) != dict:
         return None
@@ -14,7 +14,7 @@ def contatos(lista:list) -> dict:
                 agenda = dict.fromkeys(nomes)
     
         for nome in agenda:
-            agenda[nome] = []
+            agenda[nome] = [] 
 
         #abrindo o dicionário
         for dicio in lista:
@@ -32,5 +32,22 @@ def contatos(lista:list) -> dict:
 #contatos(lista)
 
 #2)
-def piano(notas: str) -> list:
-    
+#def piano(notas: str) -> list:
+
+
+
+
+
+
+
+
+
+
+
+#3)
+def rezistor(faixa_um:str, faixa_dois:str, faixa_tres:str)-> int:
+    """O usuário, chama a função introduzindo suas cores desejadas e a função retorna o valor esperado"""
+    dicValores = {"preto": 0, "marrom": 1, "vermelho": 2, "laranja": 3, "amarelo": 4}
+    valor = ((dicValores[faixa_um]*10+dicValores[faixa_dois]))*pow(10, dicValores[faixa_tres])
+    return valor
+ 
