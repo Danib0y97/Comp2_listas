@@ -32,15 +32,20 @@ def contatos(lista:list) -> dict:
 #contatos(lista)
 
 #2)
-#def piano(notas: str) -> list:
-
-
-
-
-
-
-
-
+def piano(notas:str)-> list:
+    """Essa função faz com que o usuário insira as notas desejadas e terá de retorno a frequência dessas notas."""
+    dic_freq = {"C": 262, "D": 294, "E": 330, "F": 349, "G": 392, "A": 440, "B": 494}
+    dicValorNotas = {1: -2, 2: -1, 3: 0, 4: 1, 5: 2}
+    notas_totais = len(notas)//2
+    count1 = 0
+    count2 = 2
+    frequenciasdalista = []
+    for x in range(0, notas_totais):
+        notaAtual = notas[count1:count2]
+        frequenciasdalista.append(dic_freq[notaAtual[0]]*(pow(2, dicValorNotas[int(notaAtual[1])])))
+        count1+=2
+        count2+=2
+    return frequenciasdalista
 
 
 
