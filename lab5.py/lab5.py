@@ -1,4 +1,5 @@
 #Daniel Ferreira 
+
 def absoluto(n:int) -> int:
     """Essa função verifica primeiramente se o número é positivo. Caso não seja, converte ele para positivo e o retorna. Se a pessoa não escrever um núemro, aparecerá um TypeError e um ValueError, informando o erro."""
     try:
