@@ -10,6 +10,7 @@ def escreverNoArquivo(nome_arq:str,lista:list)-> str:
 
 #2)
 def retornarLista(strlist :str)-> list:
+    """Função onde o usuário retornará uma lista que ele mesmo digitou"""
     texto = strlist.strip("[]")
     texto = texto.replace ("'", "")
     lista = texto.split(",")
@@ -23,10 +24,11 @@ def retornarLista(strlist :str)-> list:
         
 
 #3)
-def lerArquivo(nome_arq:str,lista:list) -> list:
-    nome_arq = open("arq.txt",'r')
-    nome_arq.writelines(lista)
-    listalimpa = nome_arq.strip("\n")
+def lerArquivo(nome_arq:str) -> list:
+    """A função recebe vários elementos e lê linha por linha, depois ela retorna, em uma lista, os tipos de dados dos elementos inseridos"""
+    nome_arq = open(nome_arq,'r')
+    lista = nome_arq.readlines()
+    listalimpa = lista.strip("\n")
     for indice in range(len(lista)):
         try:
          listalimpa[indice]=float(listalimpa[indice])
