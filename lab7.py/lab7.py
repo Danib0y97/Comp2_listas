@@ -1,7 +1,18 @@
+#Daniel Ferreira
 import numpy as np
 
-def senoPositivo(a, b, n):
-    c = linspace([a , b , n])
-    d = np.sin(c)[d > 0]
-    return  
+#1)
+def senoPositivo(a:int , b:int , n:int):
+    c = np.linspace(a , b , n)
+    d = np.sin(c) > 0
+    return c[d]
+    
+#2)
+def polinomio(vetor, z):
+    return sum(np.cumprod(vetor))
+
+
+
+
+
     
