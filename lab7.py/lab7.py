@@ -9,8 +9,10 @@ def senoPositivo(a:int , b:int , n:int):
     
 #2)
 def polinomio(vetor, z):
-    return sum(np.cumprod(vetor))
+ 
+    return sum(np.cumprod(vetor)*z)
 
+coeficiente N * z **(elevado a N)
 
 
 
