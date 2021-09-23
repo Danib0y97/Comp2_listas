@@ -5,9 +5,9 @@ import numpy as np
 def senoPositivo(a:int , b:int , n:int) -> np.vectorize:
     '''função consiste em devolver os números onde o seno deles são positivos.'''
     c = np.linspace(a , b , n)
-    d = np.sin(c) > 0
+    d = np.sin(c) > 
     return c[d]
-    
+  
 #2)
 def polinomio(vetor: np.vectorize, z:int) -> int:
     '''A função recebe um vetor e um número nisso, ela retorna a soma de um polinomio, com eles sendo multiplicado pela váriavel Z e elevados pelo a posição começando em 0'''
