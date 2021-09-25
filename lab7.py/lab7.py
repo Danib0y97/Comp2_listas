@@ -5,7 +5,7 @@ import numpy as np
 def senoPositivo(a:int , b:int , n:int) -> np.vectorize:
     '''função consiste em devolver os números onde o seno deles são positivos.'''
     c = np.linspace(a , b , n)
-    d = np.sin(c) > 
+    d = np.sin(c) > 0
     return c[d]
   
 #2)
