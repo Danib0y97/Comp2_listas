@@ -5,19 +5,21 @@ import numpy as np
 import scipy.stats as st
 
 
+##comentar a função, identar
 def alturas(n):
 
  numeroBins = 20
   
- x = np.linspace(1.55, 1.90, n)
+ x = np.random.randn(n)
  y = st.norm.rvs(loc = 1.7, scale = 0.08, size = n)
 
- fig, axs = plt.subplot(figssize = (6,6,))
+ fig, axs = plt.subplots(figsize = (6,6))
 
- axs.hist(x,bins = numeroBins)
+ axs.hist(x,bins = numeroBins, facecolor= 'c')
 
  plt.title('Alturas')
  plt.savefig('alturas.png')
-
  
- #retorno (?)
+ 
+ return y 
+ 
